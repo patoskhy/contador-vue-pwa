@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- metadata para PWA -->
+    <!-- color barra estados para android -->
+    <meta name="theme-color" content="#41b883">
+    <!-- mobile first para bots google -->
+    <meta name="MobileOptimazed" content="width">
+    <!-- amigable en dispositivos mobiles -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- modificar barra de estado IOS -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Contador App</title>
+
+    <!-- iconos -->
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico">
+    <link rel="apple-touch-startup-image" href="./img/favicon.ico">
+
+    <!-- manifiesto -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="./css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+    <div id="app" class="app">
+        <h1 class="title">{{title}}</h1><hr>
+        <h3 class="count">{{count}}</h3><hr>
+        <div class="buttons">
+            <button v-on:click="modCount('dis')" >-1</button>
+            <button @click="modCount('add')">+1</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mount.js"></script>
+</body>
+</html>
